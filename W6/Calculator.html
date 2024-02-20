@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang ="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 6 Calculator</title>
+    <head>
+        <body>
+            <script>
+            
+                var hourlyPay = Number(prompt("Enter your hourly pay:"));
+                var hoursWorkedPerWeek = Number(prompt("Enter hours worked per week:"));
+                var taxRate = 0.20;
+                var grossPay = hourlyPay * hoursWorkedPerWeek * 2;
+                var uncleSamsShare = grossPay * taxRate;
+                var netPay = grossPay - uncleSamsShare;
+                ///.Tofixed() method reutrns a string to a specified number of decimals Ref. W3 schools
+                alert("Gross Pay: $" + grossPay.toFixed(2) + "\nUncle Sam's Share: $" + uncleSamsShare.toFixed(2) + "\nNet Pay: $" + netPay.toFixed(2));
+                console.log("Gross Pay: $" + grossPay.toFixed(2));
+                console.log("Uncle Sam's Share: $" + uncleSamsShare.toFixed(2));
+                console.log("Net Pay: $" + netPay.toFixed(2));
+            </script>
+        </body>
+ </html>
+        
