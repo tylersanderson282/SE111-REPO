@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 | Homework Assignment</title>
+</head>
+<body>
+
+    <h1>List Of People | <a href="../W1/index.html">Home Page</a></h1>
+	<p>
+		Please fill in the form and click the submit button.
+	</p>
+	<div>
+		<table>
+			First Name: <input type="text" id="First" placeholder="Ivan"> <br>
+			Last Name: <input type="text" id="Last" placeholder="Drago"><br>
+			<button onclick="calcAndDisplay()">Submit</button>
+		</table>
+	<div>
+	<div id="output">
+	
+	</div>
+	<script>
+		let people = [];
+
+		function calcAndDisplay() {
+		let firstName = document.getElementById('First').value;
+		let lastName = document.getElementById('Last').value;
+
+		let person = { "First Name": firstName, "Last Name": lastName };
+		people.push(person);
+
+		displayPeople();
+	}
+
+		function displayPeople() {
+		let outputDiv = document.getElementById('output');
+		outputDiv.innerHTML = '';
+
+			people.forEach(person => {
+			let personInfo = document.createElement('p');
+			personInfo.textContent = `First Name: ${person["First Name"]} - Last Name: ${person["Last Name"]}`;
+			outputDiv.appendChild(personInfo);
+		});
+	}
+
+	</script>  
+</body>
+</html>

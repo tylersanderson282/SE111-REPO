@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 9 Files</title>
+<style type="text/css">
+	.border{border:1px solid black; width: 650px;}
+</style>
+</head>
+
+<body>
+	<p><a href="../W1/index.html">Main Page</a></p>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th", description:"Movie of scary guy trying to avenge the world cuz his mom was mean"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street", description:"A scary guy who lives in dreams"},
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit", description:"rabit and baby"},
+		{first:"Kevin", last:"McCallister", credit:"Home Alone", description:"little kid left home alone and hurts robberts"},
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla", description:"giant lizard who destroys cities"},
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story", description:"a guy who is a toy but is alive"},
+		{first:"Marion", last:"Cobretti", credit:"Cobra", description:"Rocky but not rocky"}
+	]
+	var charactersDiv = document.createElement("div");
+        document.body.appendChild(charactersDiv);
+
+        people.forEach(function(person) {
+            var div = document.createElement("div");
+            div.classList.add("border");
+            div.setAttribute("id", person.first);
+
+            var p1 = document.createElement("p");
+            p1.textContent = "Name: " + person.first + " " + person.last;
+            div.appendChild(p1);
+
+            var p2 = document.createElement("p");
+            p2.textContent = "Movie: " + person.credit;
+            div.appendChild(p2);
+			
+			var p3= document.createElement("p") 
+			p3.textContent ="Description:" + person.description;
+			div.appendChild(p3);
+
+            charactersDiv.appendChild(div);
+        });
+</script>
+
+</html>
